@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RMD Digital Surveyors – Expert Land Surveyors, Ramanathapuram</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --gold: #0066FF;
+      --gold-light: #FF6B35;
+      --dark: #FFFFFF;
+      --dark2: #F8F9FA;
+      --dark3: #F0F2F5;
+      --text: #1a1a1a;
+      --muted: #666666;
+      --white: #FFFFFF;
+      --radius: 14px;
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: #FFFFFF;
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--muted);
+      border-bottom: 1px solid rgba(0, 102, 255, 0.2);
+    }
+
+    .topbar a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+
+    .topbar .tb-left {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .topbar .tb-left span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 102, 255, 0.25);
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo-img {
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 102, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-logo span {
+      color: var(--gold);
+    }
+
+    .nav-logo small {
+      display: block;
+      font-size: 10px;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--muted);
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .hamburger {
+      background: none;
+      border: 1px solid rgba(0, 102, 255, 0.4);
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    .nav-menu {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #F8F9FA;
+      border-bottom: 2px solid var(--gold);
+      padding: 16px 0;
+      z-index: 998;
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+    }
+
+    .nav-menu.open {
+      display: block;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 13px 24px;
+      color: #333333;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      transition: all 0.2s;
+    }
+
+    .nav-menu a:hover {
+      color: var(--gold);
+      background: rgba(0, 102, 255, 0.06);
+      padding-left: 32px;
+    }
+
+    .nav-menu .sub-label {
+      padding: 10px 24px 4px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .nav-menu a.sub {
+      padding-left: 36px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-menu a.sub:hover {
+      color: var(--gold-light);
+    }
+
+    .services-dropdown-btn {
+      width: 100%;
+      padding: 13px 24px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      color: #333333;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-align: left;
+    }
+
+    .services-dropdown-btn:hover {
+      color: var(--gold);
+      background: rgba(0, 102, 255, 0.06);
+      padding-left: 32px;
+    }
+
+    .services-dropdown-btn .dropdown-icon {
+      margin-left: auto;
+      transition: transform 0.3s;
+    }
+
+    .services-dropdown-btn.open .dropdown-icon {
+      transform: rotate(180deg);
+    }
+
+    .services-dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .services-dropdown-content.open {
+      max-height: 500px;
+    }
+
+    .services-dropdown-content a {
+      display: block;
+      padding: 10px 36px;
+      font-size: 14px;
+      color: var(--muted);
+      background: rgba(0, 102, 255, 0.02);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .services-dropdown-content a:hover {
+      color: var(--gold-light);
+      padding-left: 44px;
+      background: rgba(0, 102, 255, 0.06);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px 20px 80px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 50%, #FFFFFF 100%);
+    }
+
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 80% 50%, rgba(0, 102, 255, 0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(0, 102, 255, 0.07) 0%, transparent 60%);
+      animation: floatBg1 8s ease-in-out infinite;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230066FF' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Hero animated elements */
+    .hero-animated-shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: floatShape 6s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .shape-1 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(0, 102, 255, 0.4) 0%, transparent 70%);
+      top: -100px;
+      left: -50px;
+      animation: floatShape1 8s ease-in-out infinite;
+    }
+
+    .shape-2 {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(255, 107, 53, 0.3) 0%, transparent 70%);
+      top: 50%;
+      right: -80px;
+      animation: floatShape2 10s ease-in-out infinite;
+    }
+
+    .shape-3 {
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(0, 102, 255, 0.25) 0%, transparent 70%);
+      bottom: -100px;
+      left: 20%;
+      animation: floatShape3 12s ease-in-out infinite;
+    }
+
+    @keyframes floatBg1 {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(20px, -10px);
+      }
+    }
+
+    @keyframes floatShape1 {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(30px, 30px) scale(1.05);
+      }
+    }
+
+    @keyframes floatShape2 {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(-40px, 40px) scale(0.95);
+      }
+    }
+
+    @keyframes floatShape3 {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(-20px, -30px) scale(1.1);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 102, 255, 0.12);
+      border: 1px solid rgba(0, 102, 255, 0.35);
+      border-radius: 50px;
+      padding: 5px 14px;
+      font-size: 11px;
+      color: var(--gold-light);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 7vw, 46px);
+      line-height: 1.2;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .hero p {
+      color: #666666;
+      font-size: 15px;
+      max-width: 420px;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #000;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 26px;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #1a1a1a;
+      font-weight: 600;
+      border: 1px solid rgba(0, 102, 255, 0.5);
+      border-radius: 10px;
+      padding: 14px 22px;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 0;
+      margin-top: 44px;
+      background: rgba(0, 102, 255, 0.05);
+      border: 1px solid rgba(0, 102, 255, 0.2);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .stat {
+      flex: 1;
+      padding: 16px 12px;
+      text-align: center;
+      border-right: 1px solid rgba(0, 102, 255, 0.15);
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: #FF6B35;
+      font-weight: 700;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 10px;
+      color: #666666;
+      line-height: 1.3;
+    }
+
+    /* ── SECTION COMMON ── */
+    section {
+      padding: 60px 20px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      background: rgba(0, 102, 255, 0.1);
+      border: 1px solid rgba(0, 102, 255, 0.25);
+      border-radius: 50px;
+      padding: 4px 14px;
+      margin-bottom: 12px;
+    }
+
+    h2.section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 6vw, 36px);
+      color: #1a1a1a;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    h2.section-title em {
+      color: #FF6B35;
+      font-style: normal;
+    }
+
+    .section-desc {
+      color: #666666;
+      font-size: 14px;
+      max-width: 500px;
+      line-height: 1.75;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      background: #F8F9FA;
+    }
+
+    .about-grid {
+      display: grid;
+      gap: 32px;
+      margin-top: 36px;
+    }
+
+    .about-img-stack {
+      position: relative;
+      height: 260px;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .about-img-stack img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    .about-badge-float {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: #FF6B35;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .about-text .check-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .about-text .check-list li {
+      padding: 8px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .about-text .check-list li i {
+      color: var(--gold);
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* ── SERVICES ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .service-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 102, 255, 0.15);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(0, 102, 255, 0.3);
+      transform: translateY(-3px);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(0, 102, 255, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #0066FF;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .service-card p {
+      font-size: 11px;
+      color: #666666;
+      line-height: 1.5;
+    }
+
+    /* ── PROJECTS ── */
+    .projects {
+      background: #F8F9FA;
+    }
+
+    .projects-scroll {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-top: 28px;
+      scrollbar-width: none;
+    }
+
+    .projects-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .project-card {
+      flex: 0 0 240px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 102, 255, 0.1);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-info {
+      padding: 14px;
+    }
+
+    .project-info span {
+      font-size: 10px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .project-info h4 {
+      font-size: 13px;
+      color: #1a1a1a;
+      margin-top: 4px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ── WHY US ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .why-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 102, 255, 0.15);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .why-card .why-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 107, 53, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #FF6B35;
+      margin: 0 auto 12px;
+    }
+
+    .why-card h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .why-card p {
+      font-size: 11px;
+      color: #666666;
+      line-height: 1.5;
+    }
+
+    /* ── FAQ ── */
+    .faq-list {
+      margin-top: 28px;
+    }
+
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 102, 255, 0.15);
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item.open {
+      border-color: rgba(0, 102, 255, 0.35);
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 16px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      color: #1a1a1a;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: left;
+      gap: 12px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .faq-q .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(0, 102, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex-shrink: 0;
+      font-size: 13px;
+      transition: transform 0.25s, background 0.25s;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: var(--gold);
+      color: #000;
+    }
+
+    .faq-a {
+      display: none;
+      padding: 0 18px 16px;
+      color: #666666;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-a {
+      display: block;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      background: #F8F9FA;
+    }
+
+    .testi-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .testi-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 102, 255, 0.15);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .testi-stars {
+      color: var(--gold);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .testi-text {
+      font-size: 13px;
+      color: #333333;
+      line-height: 1.7;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testi-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #FF6B35;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .testi-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .testi-role {
+      font-size: 11px;
+      color: #999999;
+    }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+      background: linear-gradient(135deg, rgba(0, 102, 255, 0.08), rgba(255, 107, 53, 0.05));
+      border-top: 1px solid rgba(0, 102, 255, 0.2);
+      border-bottom: 1px solid rgba(0, 102, 255, 0.2);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .cta-band h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .cta-band p {
+      color: #666666;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── QUOTE FORM ── */
+    .quote-form {
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 102, 255, 0.15);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-top: 28px;
+    }
+
+    .form-row {
+      margin-bottom: 14px;
+    }
+
+    .form-row label {
+      display: block;
+      font-size: 12px;
+      color: #666666;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      background: #F8F9FA;
+      border: 1px solid rgba(0, 102, 255, 0.2);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: var(--text);
+      font-size: 14px;
+      outline: none;
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.2s;
+    }
+
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-row textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-row select option {
+      background: #FFFFFF;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #2a2a2a;
+      border-top: 1px solid rgba(0, 102, 255, 0.3);
+      padding: 40px 20px 20px;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo-img {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 107, 53, 0.2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FF6B35;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .footer-logo span {
+      color: var(--gold);
+    }
+
+    footer p.foot-desc {
+      color: #CCCCCC;
+      font-size: 13px;
+      margin-bottom: 24px;
+      max-width: 300px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 32px;
+    }
+
+    .footer-col h4 {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #FF6B35;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 9px;
+    }
+
+    .footer-col ul li a {
+      color: #CCCCCC;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      font-size: 13px;
+      color: #CCCCCC;
+    }
+
+    .footer-contact-item i {
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    .footer-contact-item a {
+      color: #CCCCCC;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── FLOATING ACTIONS ── */
+    .float-actions {
+      position: fixed;
+      bottom: 20px;
+      right: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 900;
+    }
+
+    .float-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s;
+    }
+
+    .float-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .float-wa {
+      background: #FF6B35;
+      color: #fff;
+    }
+
+    .float-call {
+      background: #0066FF;
+      color: #fff;
+    }
+
+    /* ── SCROLL FADE IN ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── MODAL POPUP ── */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 102, 255, 0.3);
+      border-radius: 16px;
+      padding: 24px;
+      max-width: 700px;
+      width: 100%;
+      position: relative;
+      animation: slideUp 0.35s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      background: rgba(0, 102, 255, 0.1);
+      border: none;
+      border-radius: 50%;
+      color: #0066FF;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      font-weight: bold;
+    }
+
+    .modal-close:hover {
+      background: #0066FF;
+      color: #fff;
+    }
+
+    .modal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .modal-title i {
+      color: #FF6B35;
+    }
+
+    .modal-desc {
+      color: #666666;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .modal-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .modal-img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-details {
+      background: rgba(0, 102, 255, 0.05);
+      border-left: 3px solid #FF6B35;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .modal-details h4 {
+      color: #0066FF;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .modal-details p {
+      color: #1a1a1a;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .modal-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .modal-cta a {
+      flex: 1;
+      min-width: 140px;
+      text-align: center;
+      padding: 12px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .modal-cta .cta-primary {
+      background: var(--gold);
+      color: #000;
+    }
+
+    .modal-cta .cta-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .modal-cta .cta-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .modal-cta .cta-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .cta-back {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+      background: #f0f2f5;
+      color: #444;
+      border: 1px solid #d0d5dd;
+      cursor: pointer;
+    }
+
+    .cta-back:hover {
+      background: #e0e4ea;
+      color: #1a1a1a;
+      transform: translateX(-3px);
+    }
+
+    /* ── MEDIA: tablets ── */
+    @media (min-width: 600px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="tb-left">
+      <span><i class="fas fa-phone"></i><a href="tel:+919123534173">+91 91235 34173</a></span>
+      <span><i class="fas fa-envelope"></i><a
+          href="mailto:mugeshkannan02131@gmail.com">mugeshkannan02131@gmail.com</a></span>
+    </div>
+    <span><i class="fas fa-clock"></i> Mon–Fri: 9am – 8pm</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-img"><img src="logo.png.jpeg" alt="RMD Logo"
+          style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+      <div class="nav-logo-text">RMD Digital Surveyors<small>Land Surveyors · Ramanathapuram</small></div>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <i class="fas fa-bars" id="menuIcon"></i>
+    </button>
+  </nav>
+  <div class="nav-menu" id="navMenu">
+    <a href="#hero"><i class="fas fa-home" style="width:20px;color:var(--gold)"></i> Home</a>
+    <a href="about.html"><i class="fas fa-info-circle" style="width:20px;color:var(--gold)"></i> About Us</a>
+    <button class="services-dropdown-btn" id="servicesDropdownBtn">
+      <div style="display:flex;align-items:center;gap:8px">
+        <i class="fas fa-tools" style="width:20px;color:var(--gold)"></i>
+        Services
+      </div>
+      <i class="fas fa-chevron-down dropdown-icon"></i>
+    </button>
+    <div class="services-dropdown-content" id="servicesDropdownContent">
+      <a href="services.html">Boundary Survey</a>
+      <a href="services.html">Sub-division Survey</a>
+      <a href="services.html">Stakeout Survey</a>
+      <a href="services.html">Topographic Survey</a>
+      <a href="services.html">Contour Survey</a>
+      <a href="services.html">Interior Survey</a>
+      <a href="services.html">Levelling Survey</a>
+      <a href="services.html">Earthwork Survey</a>
+    </div>
+    <a href="projects.html"><i class="fas fa-building" style="width:20px;color:var(--gold)"></i> Projects</a>
+    <a href="#testimonials"><i class="fas fa-star" style="width:20px;color:var(--gold)"></i> Testimonials</a>
+    <a href="#contact"><i class="fas fa-phone-alt" style="width:20px;color:var(--gold)"></i> Contact Us</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-animated-shape shape-1"></div>
+    <div class="hero-animated-shape shape-2"></div>
+    <div class="hero-animated-shape shape-3"></div>
+    <div class="hero-content fade-up">
+
+      <h1>Professional <em>Land Surveyors</em> in Ramanathapuram</h1>
+      <p>RMD Digital Surveyors delivers precise, cost-effective land surveying solutions across India using the latest
+        Total Stations and DGPS technology.</p>
+      <div class="hero-btns">
+        <a href="tel:+9123534173" class="btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="#contact" class="btn-outline"><i class="fas fa-file-alt"></i> Free Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">250+</span><span class="stat-label">Projects</span></div>
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Clients</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Success</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">States</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="fade-up">
+      <span class="section-tag">Who We Are</span>
+      <h2 class="section-title">About <em>RMD Digital</em> Surveyors</h2>
+      <p class="section-desc">The most prominent land surveying company in Ramanathapuram, established in 2015. From
+        simple boundary surveys to complex Layout Marking work, we cover it all.</p>
+    </div>
+    <div class="about-grid fade-up">
+      <div class="about-img-stack">
+        <img src="logo.png.jpeg" alt="RMD Digital Surveyors Logo"
+          style="width:100%;height:100%;object-fit:contain;background:#fff;border-radius:14px">
+        <div class="about-badge-float"><i class="fas fa-award"></i> 10+ Years Experience</div>
+      </div>
+      <div class="about-text">
+        <ul class="check-list">
+          <li><i class="fas fa-check-circle"></i> All surveyors are well experienced</li>
+          <li><i class="fas fa-check-circle"></i> Time-bound delivery with latest technologies</li>
+          <li><i class="fas fa-check-circle"></i> 250+ projects completed across all India</li>
+          <li><i class="fas fa-check-circle"></i> Layout Marking, Countour Survey & Private sector projects</li>
+          <li><i class="fas fa-check-circle"></i> Cost effective & highly accurate surveys</li>
+          <li><i class="fas fa-check-circle"></i> Full-service from consultation to final report</li>
+        </ul>
+        <br>
+        <a href="tel:+919123534173" class="btn-primary" style="font-size:13px;padding:12px 20px"><i
+            class="fas fa-phone"></i> Talk to an Expert</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="fade-up">
+      <span class="section-tag">What We Do</span>
+      <h2 class="section-title">Our <em>Surveying</em> Services</h2>
+      <p class="section-desc">Comprehensive land surveying solutions tailored for residential, commercial, and
+        government projects.</p>
+    </div>
+    <div class="services-grid fade-up">
+      <div class="service-card" onclick="openServiceModal('Boundary Survey')">
+        <div class="service-icon"><i class="fas fa-draw-polygon"></i></div>
+        <h3>Boundary Survey</h3>
+        <p>Measure existing boundaries for exact extent and dimensions.</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('Sub-division Survey')">
+        <div class="service-icon"><i class="fas fa-divide"></i></div>
+        <h3>Sub-division Survey</h3>
+        <p>Subdivide land into 2 or more parts with layout surveys.</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('Stakeout Survey')">
+        <div class="service-icon"><i class="fas fa-map-pin"></i></div>
+        <h3>Stakeout Survey</h3>
+        <p>Mark exact position of boundary & internal points on land.</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('Topographic Survey')">
+        <div class="service-icon"><i class="fas fa-mountain"></i></div>
+        <h3>Topographic Survey</h3>
+        <p>Measure all topographic and man-made feature positions.</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('Contour Survey')">
+        <div class="service-icon"><i class="fas fa-wave-square"></i></div>
+        <h3>Contour Survey</h3>
+        <p>Measure level differences in land in a grid format.</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('Interior Survey')">
+        <div class="service-icon"><i class="fas fa-ruler-combined"></i></div>
+        <h3>Interior Survey</h3>
+        <p>Measure built-up area for exact blueprint of construction.</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('Levelling Survey')">
+        <div class="service-icon"><i class="fas fa-level-up-alt"></i></div>
+        <h3>Levelling Survey</h3>
+        <p>Precise elevation measurements for construction planning.</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('Earthwork')">
+        <div class="service-icon"><i class="fas fa-calculator"></i></div>
+        <h3>Earthwork</h3>
+        <p>Accurate earthwork quantities and calculations.</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('Column and Footing Marking')">
+        <div class="service-icon"><i class="fas fa-running"></i></div>
+        <h3>Column and Footing Marking</h3>
+        <p>Precision marking for sports courts and arenas.</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('Layout Site Making')">
+        <div class="service-icon"><i class="fas fa-th"></i></div>
+        <h3>Layout Site Making</h3>
+        <p>Complete site layout planning and marking services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="fade-up">
+      <span class="section-tag">Portfolio</span>
+      <h2 class="section-title">Milestone <em>Projects</em></h2>
+      <p class="section-desc">From Layout Marking to Countour Survey — our work spans the breadth of
+        India.</p>
+    </div>
+    <div class="projects-scroll fade-up">
+      <div class="project-card">
+        <img src="layout marking/IMG_20220610_113614.jpg.jpeg" alt="Layout Marking">
+        <div class="project-info"><span>Layout Marking</span>
+          <h4> Layout Marking Survey Project</h4>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="countour survey/WhatsApp Image 2026-03-31 at 10.31.40 AM.jpeg" alt="Contour Survey">
+        <div class="project-info"><span>Contour</span>
+          <h4>Contour Survey Project</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why">
+    <div class="fade-up">
+      <span class="section-tag">Why Us</span>
+      <h2 class="section-title">One Choice for <em>All</em> Your Needs</h2>
+      <p class="section-desc">We combine deep expertise with the latest technology to deliver surveys that stand up to
+        any scrutiny.</p>
+    </div>
+    <div class="why-grid fade-up">
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-satellite-dish"></i></div>
+        <h3>DGPS Technology</h3>
+        <p>Latest Total Stations & DGPS for maximum accuracy.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-clock"></i></div>
+        <h3>On-Time Delivery</h3>
+        <p>We complete every project within agreed timelines.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Govt Licensed</h3>
+        <p>Fully licensed and insured for all surveying work.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-rupee-sign"></i></div>
+        <h3>Affordable Rates</h3>
+        <p>Cost-effective services without compromising quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band fade-up">
+    <h2>Ready to Start Your Survey?</h2>
+    <p>Get a free consultation from our expert surveyors today.</p>
+    <div class="cta-btns">
+      <a href="tel:+919123534173" class="btn-primary"><i class="fas fa-phone"></i> +91 91235 34173</a>
+      <a href="https://wa.me/919123534173" class="btn-outline"
+        style="border-color:rgba(255,107,53,0.5);color:#FF6B35"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="fade-up">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Common <em>Questions</em></h2>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-q">What services does RMD Digital Surveyors offer?<span class="faq-icon"><i
+              class="fas fa-plus"></i></span></button>
+        <div class="faq-a">We provide comprehensive land surveying services including boundary surveys, topographic
+          surveys, construction staking, subdivision surveys, GIS mapping, and consultation services.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How can I request a survey?<span class="faq-icon"><i
+              class="fas fa-plus"></i></span></button>
+        <div class="faq-a">You can contact us by phone at +91 91235 34173, via WhatsApp, or fill out the quote form on
+          this page. Our team will guide you through the entire process.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How long does a typical surveying project take?<span class="faq-icon"><i
+              class="fas fa-plus"></i></span></button>
+        <div class="faq-a">The duration varies based on property size and complexity. We strive to complete all projects
+          promptly while maintaining our commitment to accuracy and quality.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are you licensed and insured?<span class="faq-icon"><i
+              class="fas fa-plus"></i></span></button>
+        <div class="faq-a">Yes, RMD Digital Surveyors is fully licensed by the Government and insured to provide
+          surveying services in Ramanathapuram and surrounding areas, adhering to all industry standards.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can you assist with boundary disputes?<span class="faq-icon"><i
+              class="fas fa-plus"></i></span></button>
+        <div class="faq-a">Absolutely. Our experienced surveyors specialize in resolving boundary disputes through
+          accurate surveys and expert analysis to help settle disputes amicably and legally.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you offer consultation services?<span class="faq-icon"><i
+              class="fas fa-plus"></i></span></button>
+        <div class="faq-a">Yes! We offer consultation for land development, planning permissions, and compliance with
+          local zoning laws. Our team supports your project from start to finish.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="fade-up">
+      <span class="section-tag">Reviews</span>
+      <h2 class="section-title">What Our <em>Clients</em> Say</h2>
+    </div>
+    <div class="testi-list fade-up">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Neat and clean work done. Very professional and genuine staff. They give the correct and
+          perfect output. Charges are also affordable and their work is worth the price."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Darvin</div>
+            <div class="testi-role">CEO</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Excellent service and job completed on time. Completely satisfied with their work!!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Muthu Madhesh</div>
+            <div class="testi-role">Managing Director</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Really great work! Such clean and perfect output. Our company is completely satisfied
+          with your performance. Keep going, you rock it!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Poornah Lakshmi</div>
+            <div class="testi-role">Managing Director</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <a href="https://www.google.com/search?q=RMD+Digital+Surveyors" target="_blank" class="btn-outline"
+      style="display:inline-flex;margin-top:4px"><i class="fab fa-google"></i> View All Google Reviews</a>
+  </section>
+
+  <!-- CONTACT / QUOTE -->
+  <section id="contact">
+    <div class="fade-up">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Get a <em>Free Quote</em></h2>
+      <p class="section-desc">Fill in your details and we'll get back to you promptly with a quote.</p>
+    </div>
+    <div class="quote-form fade-up">
+      <div class="form-row">
+        <label>Full Name</label>
+        <input id="contactName" type="text" placeholder="Your name">
+      </div>
+      <div class="form-row">
+        <label>Phone Number</label>
+        <input id="contactPhone" type="tel" placeholder="+91 XXXXX XXXXX">
+      </div>
+      <div class="form-row">
+        <label>Email Address</label>
+        <input id="contactEmail" type="email" placeholder="your@email.com">
+      </div>
+      <div class="form-row">
+        <label>Service Required</label>
+        <select id="contactService">
+          <option value="">Select a service…</option>
+          <option>Boundary Survey</option>
+          <option>Sub-division Survey</option>
+          <option>Stakeout Survey</option>
+          <option>Topographic Survey</option>
+          <option>Contour Survey</option>
+          <option>Interior Survey</option>
+          <option>Levelling Survey</option>
+          <option>Earthwork Survey</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Message</label>
+        <textarea id="contactMessage" placeholder="Describe your project or land location…"></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%;justify-content:center" onclick="submitForm()">
+        <i class="fab fa-whatsapp"></i> Send via WhatsApp
+      </button>
+    </div>
+
+    <!-- Direct contact -->
+    <div style="margin-top:28px;display:grid;gap:12px">
+      <a href="tel:+919123534173"
+        style="display:flex;align-items:center;gap:14px;background:#0066FF;border:1px solid rgba(255,255,255,0.3);border-radius:var(--radius);padding:16px;text-decoration:none;">
+        <div
+          style="width:44px;height:44px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.75)">Call Us</div>
+          <div style="font-size:15px;color:#fff;font-weight:600">+91 91235 34173</div>
+        </div>
+      </a>
+      <a href="https://wa.me/919123534173"
+        style="display:flex;align-items:center;gap:14px;background:#0066FF;border:1px solid rgba(255,255,255,0.3);border-radius:var(--radius);padding:16px;text-decoration:none;">
+        <div
+          style="width:44px;height:44px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;flex-shrink:0">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.75)">WhatsApp</div>
+          <div style="font-size:15px;color:#fff;font-weight:600">Chat with us</div>
+        </div>
+      </a>
+      <a href="https://maps.app.goo.gl/qr5G1iZ1uLPAktgs9?g_st=aw" target="_blank"
+        style="display:flex;align-items:center;gap:14px;background:#0066FF;border:1px solid rgba(255,255,255,0.3);border-radius:var(--radius);padding:16px;text-decoration:none;">
+        <div
+          style="width:44px;height:44px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.75)">Address</div>
+          <div style="font-size:13px;color:#fff;font-weight:500">#357, Ramachandra Layout, Ramnagar,
+            Ramanathapuram – 641009</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <div class="footer-logo-img"><img src="logo.png.jpeg" alt="RMD Logo"
+          style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+      <div>RMD Digital Surveyors</div>
+    </div>
+    <p class="foot-desc">The most prominent land surveying company in Ramanathapuram, serving since 2015.</p>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Boundary Survey</a></li>
+          <li><a href="services.html">Sub-division Survey</a></li>
+          <li><a href="services.html">Stakeout Survey</a></li>
+          <li><a href="services.html">Topographic Survey</a></li>
+          <li><a href="services.html">Contour Survey</a></li>
+          <li><a href="services.html">Interior Survey</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+919123534173">+91 91235 34173</a>
+        </div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a
+            href="mailto:mugeshkannan02131@gmail.com">mugeshkannan02131@gmail.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Ramnagar, Ramanathapuram –
+            641009</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 RMD Digital Surveyors. All rights reserved.</div>
+  </footer>
+
+  <!-- SERVICE MODAL -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeServiceModal()">&times;</button>
+      <h2 class="modal-title">
+        <i id="modalIcon" class="fas fa-draw-polygon"></i>
+        <span id="modalTitle">Boundary Survey</span>
+      </h2>
+      <p class="modal-desc" id="modalDesc">Measure existing boundaries for exact extent and dimensions.</p>
+
+      <div class="modal-gallery" id="modalGallery">
+        <img src="layout marking/IMG_20220610_113614.jpg.jpeg" alt="Service" class="modal-img">
+        <img src="layout marking/IMG_20241130_133619.jpg.jpeg" alt="Service" class="modal-img">
+        <img src="layout marking/IMG_20250312_161441.jpg.jpeg" alt="Service" class="modal-img">
+        <img src="layout marking/IMG_20260223_113049.jpg.jpeg" alt="Service" class="modal-img">
+      </div>
+
+      <div class="modal-details">
+        <h4>Why Choose This Service?</h4>
+        <p id="modalBenefit">Accurate boundary measurements protect your property rights and are essential for legal
+          documentation, construction planning, and property disputes resolution.</p>
+      </div>
+
+      <div class="modal-details">
+        <h4>Our Process</h4>
+        <p id="modalProcess">We use latest Total Station and DGPS technology to measure and document property boundaries
+          with precision. Our team ensures all measurements comply with government standards.</p>
+      </div>
+
+      <div class="modal-cta">
+        <button onclick="closeServiceModal()" class="cta-back"><i class="fas fa-arrow-left"></i> Back</button>
+        <a href="tel:+919123534173" class="cta-primary"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="https://wa.me/919123534173" class="cta-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="float-actions">
+    <a href="https://wa.me/919123534173" class="float-btn float-wa" target="_blank" aria-label="WhatsApp"><i
+        class="fab fa-whatsapp"></i></a>
+    <a href="tel:+919123534173" class="float-btn float-call" aria-label="Call"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <script>
+    // SERVICE DATA
+    const serviceData = {
+      'Boundary Survey': {
+        icon: 'fa-draw-polygon',
+        desc: 'Measure existing boundaries for exact extent and dimensions.',
+        benefit: 'Accurate boundary measurements protect your property rights and are essential for legal documentation, construction planning, and property disputes resolution.',
+        process: 'We use latest Total Station and DGPS technology to measure and document property boundaries with precision. Our team ensures all measurements comply with government standards.',
+        images: [
+          'layout marking/IMG_20220610_113614.jpg.jpeg',
+          'layout marking/IMG_20241130_133619.jpg.jpeg',
+          'layout marking/IMG_20250312_161441.jpg.jpeg',
+          'layout marking/IMG_20260223_113049.jpg.jpeg'
+        ]
+      },
+      'Sub-division Survey': {
+        icon: 'fa-divide',
+        desc: 'Subdivide land into 2 or more parts with layout surveys.',
+        benefit: 'Subdivision surveys are crucial for dividing properties among family members, selling portions, or developing land into multiple plots for construction.',
+        process: 'Our experts prepare detailed subdivision plans with precise measurements and legal documentation. Each subdivided plot is measured and marked according to regulatory requirements.',
+        images: [
+          'subdivision survey/IMG_20251202_162150.jpg.jpeg',
+          'subdivision survey/IMG_20260320_095330.jpg.jpeg',
+          'subdivision survey/IMG_20260320_095625.jpg.jpeg',
+          'subdivision survey/IMG_20260320_152256.jpg.jpeg'
+        ]
+      },
+      'Stakeout Survey': {
+        icon: 'fa-map-pin',
+        desc: 'Mark exact position of boundary & internal points on land.',
+        benefit: 'Stakeout surveys ensure accurate placement of construction boundaries, helping contractors and builders execute work exactly as planned.',
+        process: 'We precisely locate and mark boundary points and internal survey points on the ground using DGPS and Total Stations, ensuring contractors have clear reference points.',
+        images: [
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM.jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (1).jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.27 AM.jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.27 AM (1).jpeg'
+        ]
+      },
+      'Topographic Survey': {
+        icon: 'fa-mountain',
+        desc: 'Measure all topographic and man-made feature positions.',
+        benefit: 'Topographic surveys provide detailed maps showing terrain, structures, utilities, and features essential for planning, design, and development projects.',
+        process: 'We conduct comprehensive field surveys to map terrain elevations, natural features, and man-made structures, creating detailed topographic maps for planning.',
+        images: [
+          'countour survey/WhatsApp Image 2026-03-31 at 10.31.40 AM.jpeg',
+          'countour survey/WhatsApp Image 2026-03-31 at 10.31.41 AM.jpeg',
+          'layout marking/IMG_20260224_104858.jpg.jpeg',
+          'layout marking/IMG_20260223_113049.jpg.jpeg'
+        ]
+      },
+      'Contour Survey': {
+        icon: 'fa-wave-square',
+        desc: 'Measure level differences in land in a grid format.',
+        benefit: 'Contour surveys map terrain elevation changes essential for construction planning, drainage design, and understanding site topography.',
+        process: 'We establish a grid pattern across the land and measure elevation at each point, creating contour maps showing terrain slopes and level differences.',
+        images: [
+          'countour survey/WhatsApp Image 2026-03-31 at 10.31.40 AM.jpeg',
+          'countour survey/WhatsApp Image 2026-03-31 at 10.31.41 AM.jpeg',
+          'countour survey/WhatsApp Image 2026-03-31 at 10.31.42 AM.jpeg',
+          'countour survey/WhatsApp Image 2026-03-31 at 10.31.42 AM (1).jpeg'
+        ]
+      },
+      'Interior Survey': {
+        icon: 'fa-ruler-combined',
+        desc: 'Measure built-up area for exact blueprint of construction.',
+        benefit: 'Interior surveys document exact measurements of buildings and built-up areas, crucial for legal records, property valuation, and renovation planning.',
+        process: 'We measure all internal dimensions, room areas, wall placements, and features to create accurate architectural blueprints and built-up area documentation.',
+        images: [
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (2).jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (3).jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.28 AM.jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.28 AM (1).jpeg'
+        ]
+      },
+      'Levelling Survey': {
+        icon: 'fa-level-up-alt',
+        desc: 'Precise elevation measurements for construction planning.',
+        benefit: 'Accurate elevation data ensures proper site preparation, drainage planning, and structural foundation design for safe construction.',
+        process: 'We use precision leveling instruments to measure elevation differences across the site, providing detailed vertical data for construction planning.',
+        images: [
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM.jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (1).jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (2).jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.27 AM.jpeg'
+        ]
+      },
+      'Earthwork Survey ': {
+        icon: 'fa-calculator',
+        desc: 'Accurate earthwork quantities and calculations.',
+        benefit: 'Earthwork calculations ensure accurate project costing, proper material planning, and efficient excavation/fill work management.',
+        process: 'We calculate earthwork quantities using advanced surveying tools and software, providing accurate quantity estimates for cost and resource planning.',
+        images: [
+          'subdivision survey/IMG_20251202_162150.jpg.jpeg',
+          'subdivision survey/IMG_20260320_095330.jpg.jpeg',
+          'countour survey/WhatsApp Image 2026-03-31 at 10.31.42 AM.jpeg',
+          'countour survey/WhatsApp Image 2026-03-31 at 10.31.42 AM (1).jpeg'
+        ]
+      },
+      'Column and Footing Marking': {
+        icon: 'fa-drafting-compass',
+        desc: 'Precise marking of column and footing positions on the ground for accurate construction.',
+        benefit: 'Accurate column and footing marking ensures structural elements are placed exactly as designed, preventing costly construction errors and ensuring building safety.',
+        process: 'We use Total Station and DGPS to precisely mark column and footing positions on the ground based on approved structural drawings, providing clear reference points for construction.',
+        images: [
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM.jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (1).jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (2).jpeg',
+          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (3).jpeg'
+        ]
+      },
+      'Layout Site Making': {
+        icon: 'fa-th',
+        desc: 'Complete site layout planning and marking services.',
+        benefit: 'Site layout ensures organized construction planning, proper space utilization, and efficient project execution.',
+        process: 'We plan complete site layouts including building positioning, utility placements, access roads, and marking them precisely on the ground.',
+        images: [
+          'layout marking/IMG_20220610_113614.jpg.jpeg',
+          'layout marking/IMG_20241130_133619.jpg.jpeg',
+          'layout marking/IMG_20250312_161441.jpg.jpeg',
+          'layout marking/IMG_20260223_113049.jpg.jpeg'
+        ]
+      }
+    };
+
+    // OPEN SERVICE MODAL
+    function openServiceModal(serviceName) {
+      const data = serviceData[serviceName];
+      if (!data) return;
+
+      document.getElementById('modalIcon').className = 'fas ' + data.icon;
+      document.getElementById('modalTitle').textContent = serviceName;
+      document.getElementById('modalDesc').textContent = data.desc;
+      document.getElementById('modalBenefit').textContent = data.benefit;
+      document.getElementById('modalProcess').textContent = data.process;
+
+      const gallery = document.getElementById('modalGallery');
+      gallery.innerHTML = data.images.map(img =>
+        `<img src="${img}" alt="${serviceName}" class="modal-img">`
+      ).join('');
+
+      document.getElementById('serviceModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // CLOSE SERVICE MODAL
+    function closeServiceModal() {
+      document.getElementById('serviceModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // CLOSE MODAL WHEN CLICKING OUTSIDE
+    document.getElementById('serviceModal')?.addEventListener('click', function (e) {
+      if (e.target === this) {
+        closeServiceModal();
+      }
+    });
+
+    // MOBILE MENU
+    const hamburger = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const servicesDropdownBtn = document.getElementById('servicesDropdownBtn');
+    const servicesDropdownContent = document.getElementById('servicesDropdownContent');
+
+    // Toggle main menu
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      menuIcon.className = navMenu.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+    });
+
+    // Toggle services dropdown
+    servicesDropdownBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      servicesDropdownBtn.classList.toggle('open');
+      servicesDropdownContent.classList.toggle('open');
+    });
+
+    // Close menu when clicking on links (except services dropdown)
+    navMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        menuIcon.className = 'fas fa-bars';
+      });
+    });
+
+    // FAQ ACCORDION
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // SCROLL FADE-IN
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // FORM SUBMIT → WhatsApp redirect
+    function submitForm() {
+      const name = document.getElementById('contactName').value.trim();
+      const phone = document.getElementById('contactPhone').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const service = document.getElementById('contactService').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+
+      if (!name || !phone || !message) {
+        alert('Please fill in at least your Name, Phone Number, and Message.');
+        return;
+      }
+
+      const text = [
+        '🏗️ *New Enquiry – RMD Digital Surveyors*',
+        '',
+        '👤 *Name:* ' + name,
+        '📞 *Phone:* ' + phone,
+        email ? '📧 *Email:* ' + email : '',
+        service ? '🔧 *Service:* ' + service : '',
+        '📝 *Message:* ' + message
+      ].filter(Boolean).join('\n');
+
+      const waNumber = '919123534173';
+      const waURL = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(text);
+      window.open(waURL, '_blank');
+    }
+  </script>
+</body>
+
+</html>
