@@ -4,7 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services – RMD Digital Surveyors – Expert Land Surveyors, Ramanathapuram</title>
+  <link rel="icon" type="image/jpeg" href="logo.png.jpeg">
+  <title>Our Services – RMD Digital Surveyors – Expert Land Surveyors in Ramanathapuram</title>
+  <meta name="description" content="Professional land surveying services in Ramanathapuram. We offer boundary surveys, topographic surveys, contour surveys, DGPS, and Total Station surveying with high accuracy and government standards.">
+  <meta name="keywords" content="RMD Digital Surveyors Services, Boundary Survey Ramanathapuram, Topographic Survey Tamil Nadu, Contour Surveying, DGPS Survey Services, Interior Survey, Levelling Survey">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rmddigitalsurveyors.com/services.html">
+  <meta property="og:title" content="Our Services – RMD Digital Surveyors">
+  <meta property="og:description" content="Comprehensive land surveying solutions tailored for residential, commercial, and government projects in Ramanathapuram.">
+  <meta property="og:image" content="https://rmddigitalsurveyors.com/logo.png.jpeg">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet">
@@ -475,9 +486,106 @@
       background: #2a2a2a;
       border-top: 1px solid rgba(0, 102, 255, 0.3);
       padding: 40px 20px 20px;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo-img {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 107, 53, 0.2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FF6B35;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    footer p.foot-desc {
       color: #CCCCCC;
+      font-size: 13px;
+      margin-bottom: 24px;
+      max-width: 300px;
+      text-align: left;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+
+    .footer-col h4 {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #FF6B35;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 9px;
+    }
+
+    .footer-col ul li a {
+      color: #CCCCCC;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      font-size: 13px;
+      color: #CCCCCC;
+    }
+
+    .footer-contact-item i {
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    .footer-contact-item a {
+      color: #CCCCCC;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      padding-top: 20px;
       text-align: center;
       font-size: 12px;
+      color: var(--muted);
+    }
+    
+    @media (min-width: 600px) {
+      .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     /* ── MEDIA: tablets ── */
@@ -636,8 +744,42 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 RMD Digital Surveyors. All rights reserved. Developed by SCODE360 | <a href="index.html"
-        style="color:#FF6B35;text-decoration:none;">Back to Home</a></p>
+    <div class="footer-logo">
+      <div class="footer-logo-img"><img src="logo.png.jpeg" alt="RMD Logo"
+          style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+      <div>RMD Digital Surveyors</div>
+    </div>
+    <p class="foot-desc">The most prominent land surveying company in Ramanathapuram, serving since 2015.</p>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Boundary Survey</a></li>
+          <li><a href="services.html">Sub-division Survey</a></li>
+          <li><a href="services.html">Stakeout Survey</a></li>
+          <li><a href="services.html">Topographic Survey</a></li>
+          <li><a href="services.html">Contour Survey</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact & Connect</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+919123534173">+91 91235 34173</a></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:mugeshkannan02131@gmail.com">Email Us</a></div>
+        <div class="footer-contact-item"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/rmd_digital_surveyors" target="_blank">Instagram</a></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marked-alt"></i><a href="https://maps.app.goo.gl/qr5G1iZ1uLPAktgs9" target="_blank">Google Maps</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 RMD Digital Surveyors. All rights reserved. Developed by <a href="https://scode360.in" target="_blank" style="color:var(--gold-light);text-decoration:none;">SCODE360</a></div>
   </footer>
 
   <!-- SERVICE MODAL (from main page) -->
