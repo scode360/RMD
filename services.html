@@ -5,16 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/jpeg" href="logo.png.jpeg">
-  <title>Our Services – RMD Digital Surveyors – Expert Land Surveyors in Ramanathapuram</title>
-  <meta name="description" content="Professional land surveying services in Ramanathapuram. We offer boundary surveys, topographic surveys, contour surveys, DGPS, and Total Station surveying with high accuracy and government standards.">
-  <meta name="keywords" content="RMD Digital Surveyors Services, Boundary Survey Ramanathapuram, Topographic Survey Tamil Nadu, Contour Surveying, DGPS Survey Services, Interior Survey, Levelling Survey">
+  <title>Land Surveying Services in Ramanathapuram | Column, Contour & Layout Marking</title>
+  <meta name="description" content="Explore professional land surveying services by RMD Digital Surveyors in Ramanathapuram. We specialize in Column Marking, Contour Surveys, Layout Site Marking, and Subdivision Surveys with 100% accuracy.">
+  <meta name="keywords" content="Column Marking Ramanathapuram, Contour Survey Services, Layout Marking Survey, Subdivision Survey Ramanathapuram, DGPS Land Surveying, Total Station Survey Tamil Nadu">
+  <link rel="canonical" href="https://rmddigitalsurveyors.in/services.html">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rmddigitalsurveyors.com/services.html">
-  <meta property="og:title" content="Our Services – RMD Digital Surveyors">
-  <meta property="og:description" content="Comprehensive land surveying solutions tailored for residential, commercial, and government projects in Ramanathapuram.">
-  <meta property="og:image" content="https://rmddigitalsurveyors.com/logo.png.jpeg">
+  <meta property="og:url" content="https://rmddigitalsurveyors.in/services.html">
+  <meta property="og:title" content="Our Surveying Services | RMD Digital Surveyors">
+  <meta property="og:description" content="Comprehensive land surveying solutions including Column Marking, Contour, and Layout surveys in Ramanathapuram and across Tamil Nadu.">
+  <meta property="og:image" content="https://rmddigitalsurveyors.in/logo.png.jpeg">
 
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
@@ -314,11 +315,28 @@
       background: #FFFFFF;
       border: 1px solid rgba(0, 102, 255, 0.15);
       border-radius: var(--radius);
-      padding: 24px;
+      padding: 0;
       transition: all 0.3s;
       position: relative;
       overflow: hidden;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .service-card:hover .service-img {
+      transform: scale(1.05);
+    }
+
+    .service-card-body {
+      padding: 24px;
     }
 
     .service-card::before {
@@ -611,10 +629,10 @@
 
   <!-- NAVBAR -->
   <nav>
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-img"><img src="logo.png.jpeg" alt="RMD Logo"
+    <a href="index.html" class="nav-logo" title="RMD Digital Surveyors Home">
+      <div class="nav-logo-img"><img src="logo.png.jpeg" alt="RMD Digital Surveyors Official Logo - Ramanathapuram"
           style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
-      <div class="nav-logo-text">RMD Digital Surveyors<small>Land Surveyors · Ramanathapuram</small></div>
+      <div class="nav-logo-text">RMD Digital Surveyors<small>Expert Land Surveyors · Ramanathapuram</small></div>
     </a>
     <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
       <i class="fas fa-bars" id="menuIcon"></i>
@@ -631,14 +649,10 @@
       <i class="fas fa-chevron-down dropdown-icon"></i>
     </button>
     <div class="services-dropdown-content" id="servicesDropdownContent">
-      <a href="services.html">Boundary Survey</a>
-      <a href="services.html">Sub-division Survey</a>
-      <a href="services.html">Stakeout Survey</a>
-      <a href="services.html">Topographic Survey</a>
+      <a href="services.html">Column & Footing Marking</a>
       <a href="services.html">Contour Survey</a>
-      <a href="services.html">Interior Survey</a>
-      <a href="services.html">Levelling Survey</a>
-      <a href="services.html">Earthwork Survey</a>
+      <a href="services.html">Layout Marking</a>
+      <a href="services.html">Subdivision Survey</a>
     </div>
     <a href="projects.html"><i class="fas fa-building" style="width:20px;color:var(--gold)"></i> Projects</a>
     <a href="index.html#testimonials"><i class="fas fa-star" style="width:20px;color:var(--gold)"></i> Testimonials</a>
@@ -658,75 +672,44 @@
     <h2 class="section-title">Professional <em>Surveying Services</em></h2>
 
     <div class="services-grid">
-      <div class="service-card" onclick="openServiceModal('Boundary Survey')">
-        <div class="service-icon"><i class="fas fa-draw-polygon"></i></div>
-        <h3>Boundary Survey</h3>
-        <p>Measure existing boundaries for exact extent and dimensions. Essential for property documentation and legal
-          records.</p>
-        <a href="#" class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
+      <div class="service-card" onclick="openServiceModal('Column & Footing Marking')" title="View Column & Footing Marking Details">
+        <img src="images/column%20&%20footing%20marking/WhatsApp%20Image%202026-03-31%20at%2010.39.26%20AM.jpeg" alt="DGPS enabled Column and Footing Marking in progress" class="service-img">
+        <div class="service-card-body">
+          <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h3>Column & Footing Marking</h3>
+          <p>Precision marking for building columns and foundations ensuring structural alignment with architectural plans.</p>
+          <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
       </div>
 
-      <div class="service-card" onclick="openServiceModal('Sub-division Survey')">
-        <div class="service-icon"><i class="fas fa-divide"></i></div>
-        <h3>Sub-division Survey</h3>
-        <p>Subdivide land into 2 or more parts with detailed layout surveys and legal compliance.</p>
-        <a href="#" class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
+      <div class="service-card" onclick="openServiceModal('Contour Survey')" title="View Contour Survey Details">
+        <img src="images/countour%20survey/WhatsApp%20Image%202026-03-31%20at%2010.31.40%20AM.jpeg" alt="Expert Contour Survey and Land Elevation Mapping" class="service-img">
+        <div class="service-card-body">
+          <div class="service-icon"><i class="fas fa-wave-square"></i></div>
+          <h3>Contour Survey</h3>
+          <p>Detailed measurement of land elevations and terrain variations in a grid format for precise site analysis.</p>
+          <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
       </div>
 
-      <div class="service-card" onclick="openServiceModal('Stakeout Survey')">
-        <div class="service-icon"><i class="fas fa-map-pin"></i></div>
-        <h3>Stakeout Survey</h3>
-        <p>Mark exact position of boundary & internal points on land for construction alignment.</p>
-        <a href="#" class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
+      <div class="service-card" onclick="openServiceModal('Layout Marking')" title="View Layout Marking Details">
+        <img src="images/layout%20marking/IMG_20220610_113614.jpg.jpeg" alt="Professional Layout Site Marking for Residential Projects" class="service-img">
+        <div class="service-card-body">
+          <div class="service-icon"><i class="fas fa-th"></i></div>
+          <h3>Layout Marking</h3>
+          <p>Complete site layout planning and marking services for organized construction and plot development.</p>
+          <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
       </div>
 
-      <div class="service-card" onclick="openServiceModal('Topographic Survey')">
-        <div class="service-icon"><i class="fas fa-mountain"></i></div>
-        <h3>Topographic Survey</h3>
-        <p>Measure all topographic and man-made feature positions for detailed site mapping.</p>
-        <a href="#" class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
-      </div>
-
-      <div class="service-card" onclick="openServiceModal('Contour Survey')">
-        <div class="service-icon"><i class="fas fa-wave-square"></i></div>
-        <h3>Contour Survey</h3>
-        <p>Measure level differences in land in a grid format for terrain analysis.</p>
-        <a href="#" class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
-      </div>
-
-      <div class="service-card" onclick="openServiceModal('Interior Survey')">
-        <div class="service-icon"><i class="fas fa-ruler-combined"></i></div>
-        <h3>Interior Survey</h3>
-        <p>Measure built-up area for exact blueprint of construction and property valuation.</p>
-        <a href="#" class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
-      </div>
-
-      <div class="service-card" onclick="openServiceModal('Levelling Survey')">
-        <div class="service-icon"><i class="fas fa-level-up-alt"></i></div>
-        <h3>Levelling Survey</h3>
-        <p>Precise elevation measurements for construction planning and site preparation.</p>
-        <a href="#" class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
-      </div>
-
-      <div class="service-card" onclick="openServiceModal('Earthwork Survey')">
-        <div class="service-icon"><i class="fas fa-calculator"></i></div>
-        <h3>Earthwork Survey</h3>
-        <p>Accurate earthwork quantities and calculations for project estimation.</p>
-        <a href="#" class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
-      </div>
-
-      <div class="service-card" onclick="openServiceModal('Column and Footing Marking')">
-        <div class="service-icon"><i class="fas fa-running"></i></div>
-        <h3>Column and Footing Marking</h3>
-        <p>Precision marking for sports courts and arenas meeting international standards.</p>
-        <a href="#" class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
-      </div>
-
-      <div class="service-card" onclick="openServiceModal('Layout Site Making')">
-        <div class="service-icon"><i class="fas fa-th"></i></div>
-        <h3>Layout Site Making</h3>
-        <p>Complete site layout planning and marking services for organized construction.</p>
-        <a href="#" class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</a>
+      <div class="service-card" onclick="openServiceModal('Subdivision Survey')" title="View Subdivision Survey Details">
+        <img src="images/subdivision%20survey/IMG_20251202_162150.jpg.jpeg" alt="Accurate Land Subdivision and Plotting Services" class="service-img">
+        <div class="service-card-body">
+          <div class="service-icon"><i class="fas fa-divide"></i></div>
+          <h3>Subdivision Survey</h3>
+          <p>Accurate partitioning of land into multiple plots with legal compliance and detailed boundary charts.</p>
+          <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
       </div>
     </div>
   </section>
@@ -745,7 +728,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">
-      <div class="footer-logo-img"><img src="logo.png.jpeg" alt="RMD Logo"
+      <div class="footer-logo-img"><img src="logo.png.jpeg" alt="RMD Digital Surveyors Footer Logo"
           style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
       <div>RMD Digital Surveyors</div>
     </div>
@@ -764,11 +747,10 @@
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html">Boundary Survey</a></li>
-          <li><a href="services.html">Sub-division Survey</a></li>
-          <li><a href="services.html">Stakeout Survey</a></li>
-          <li><a href="services.html">Topographic Survey</a></li>
+          <li><a href="services.html">Column & Footing Marking</a></li>
           <li><a href="services.html">Contour Survey</a></li>
+          <li><a href="services.html">Layout Marking</a></li>
+          <li><a href="services.html">Subdivision Survey</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1020,124 +1002,52 @@
   <script>
     // SERVICE DATA
     const serviceData = {
-      'Boundary Survey': {
-        icon: 'fa-draw-polygon',
-        desc: 'Measure existing boundaries for exact extent and dimensions.',
-        benefit: 'Accurate boundary measurements protect your property rights and are essential for legal documentation, construction planning, and property disputes resolution.',
-        process: 'We use latest Total Station and DGPS technology to measure and document property boundaries with precision. Our team ensures all measurements comply with government standards.',
+      'Column & Footing Marking': {
+        icon: 'fa-drafting-compass',
+        desc: 'Precise marking of column and footing positions on the ground for building foundations.',
+        benefit: 'Ensures structural elements are placed exactly as designed, preventing costly construction errors.',
+        process: 'We use Total Station and DGPS to precisely mark column and footing positions based on approved structural drawings.',
         images: [
-          'layout marking/IMG_20220610_113614.jpg.jpeg',
-          'layout marking/IMG_20241130_133619.jpg.jpeg',
-          'layout marking/IMG_20250312_161441.jpg.jpeg',
-          'layout marking/IMG_20260223_113049.jpg.jpeg'
-        ]
-      },
-      'Sub-division Survey': {
-        icon: 'fa-divide',
-        desc: 'Subdivide land into 2 or more parts with layout surveys.',
-        benefit: 'Subdivision surveys are crucial for dividing properties among family members, selling portions, or developing land into multiple plots for construction.',
-        process: 'Our experts prepare detailed subdivision plans with precise measurements and legal documentation. Each subdivided plot is measured and marked according to regulatory requirements.',
-        images: [
-          'subdivision survey/IMG_20251202_162150.jpg.jpeg',
-          'subdivision survey/IMG_20260320_095330.jpg.jpeg',
-          'subdivision survey/IMG_20260320_095625.jpg.jpeg',
-          'subdivision survey/IMG_20260320_152256.jpg.jpeg'
-        ]
-      },
-      'Stakeout Survey': {
-        icon: 'fa-map-pin',
-        desc: 'Mark exact position of boundary & internal points on land.',
-        benefit: 'Stakeout surveys ensure accurate placement of construction boundaries, helping contractors and builders execute work exactly as planned.',
-        process: 'We precisely locate and mark boundary points and internal survey points on the ground using DGPS and Total Stations, ensuring contractors have clear reference points.',
-        images: [
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM.jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (1).jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.27 AM.jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.27 AM (1).jpeg'
-        ]
-      },
-      'Topographic Survey': {
-        icon: 'fa-mountain',
-        desc: 'Measure all topographic and man-made feature positions.',
-        benefit: 'Topographic surveys provide detailed maps showing terrain, structures, utilities, and features essential for planning, design, and development projects.',
-        process: 'We conduct comprehensive field surveys to map terrain elevations, natural features, and man-made structures, creating detailed topographic maps for planning.',
-        images: [
-          'countour survey/WhatsApp Image 2026-03-31 at 10.31.40 AM.jpeg',
-          'countour survey/WhatsApp Image 2026-03-31 at 10.31.41 AM.jpeg',
-          'layout marking/IMG_20260224_104858.jpg.jpeg',
-          'layout marking/IMG_20260223_113049.jpg.jpeg'
+          'images/column%20&%20footing%20marking/WhatsApp%20Image%202026-03-31%20at%2010.39.26%20AM.jpeg',
+          'images/column%20&%20footing%20marking/WhatsApp%20Image%202026-03-31%20at%2010.39.26%20AM%20(1).jpeg',
+          'images/column%20&%20footing%20marking/WhatsApp%20Image%202026-03-31%20at%2010.39.27%20AM.jpeg',
+          'images/column%20&%20footing%20marking/WhatsApp%20Image%202026-03-31%20at%2010.39.27%20AM%20(1).jpeg'
         ]
       },
       'Contour Survey': {
         icon: 'fa-wave-square',
-        desc: 'Measure level differences in land in a grid format.',
-        benefit: 'Contour surveys map terrain elevation changes essential for construction planning, drainage design, and understanding site topography.',
-        process: 'We establish a grid pattern across the land and measure elevation at each point, creating contour maps showing terrain slopes and level differences.',
+        desc: 'Measure level differences in land in a grid format for terrain analysis.',
+        benefit: 'Essential for drainage design, site grading, and architectural planning of sloped terrain.',
+        process: 'We establish a grid pattern across the land and measure elevations at each point to create detailed contour maps.',
         images: [
-          'countour survey/WhatsApp Image 2026-03-31 at 10.31.40 AM.jpeg',
-          'countour survey/WhatsApp Image 2026-03-31 at 10.31.41 AM.jpeg',
-          'countour survey/WhatsApp Image 2026-03-31 at 10.31.42 AM.jpeg',
-          'countour survey/WhatsApp Image 2026-03-31 at 10.31.42 AM (1).jpeg'
+          'images/countour%20survey/WhatsApp%20Image%202026-03-31%20at%2010.31.40%20AM.jpeg',
+          'images/countour%20survey/WhatsApp%20Image%202026-03-31%20at%2010.31.41%20AM.jpeg',
+          'images/countour%20survey/WhatsApp%20Image%202026-03-31%20at%2010.31.42%20AM.jpeg',
+          'images/countour%20survey/WhatsApp%20Image%202026-03-31%20at%2010.31.42%20AM%20(1).jpeg'
         ]
       },
-      'Interior Survey': {
-        icon: 'fa-ruler-combined',
-        desc: 'Measure built-up area for exact blueprint of construction.',
-        benefit: 'Interior surveys document exact measurements of buildings and built-up areas, crucial for legal records, property valuation, and renovation planning.',
-        process: 'We measure all internal dimensions, room areas, wall placements, and features to create accurate architectural blueprints and built-up area documentation.',
-        images: [
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (2).jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (3).jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.28 AM.jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.28 AM (1).jpeg'
-        ]
-      },
-      'Levelling Survey': {
-        icon: 'fa-level-up-alt',
-        desc: 'Precise elevation measurements for construction planning.',
-        benefit: 'Accurate elevation data ensures proper site preparation, drainage planning, and structural foundation design for safe construction.',
-        process: 'We use precision leveling instruments to measure elevation differences across the site, providing detailed vertical data for construction planning.',
-        images: [
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM.jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (1).jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (2).jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.27 AM.jpeg'
-        ]
-      },
-      'Earthwork Survey': {
-        icon: 'fa-calculator',
-        desc: 'Accurate earthwork quantities and calculations.',
-        benefit: 'Earthwork calculations ensure accurate project costing, proper material planning, and efficient excavation/fill work management.',
-        process: 'We calculate earthwork quantities using advanced surveying tools and software, providing accurate quantity estimates for cost and resource planning.',
-        images: [
-          'subdivision survey/IMG_20251202_162150.jpg.jpeg',
-          'subdivision survey/IMG_20260320_095330.jpg.jpeg',
-          'countour survey/WhatsApp Image 2026-03-31 at 10.31.42 AM.jpeg',
-          'countour survey/WhatsApp Image 2026-03-31 at 10.31.42 AM (1).jpeg'
-        ]
-      },
-      'Column and Footing Marking': {
-        icon: 'fa-drafting-compass',
-        desc: 'Precise marking of column and footing positions on the ground for accurate construction.',
-        benefit: 'Accurate column and footing marking ensures structural elements are placed exactly as designed, preventing costly construction errors and ensuring building safety.',
-        process: 'We use Total Station and DGPS to precisely mark column and footing positions on the ground based on approved structural drawings, providing clear reference points for construction.',
-        images: [
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM.jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (1).jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (2).jpeg',
-          'column & footing marking/WhatsApp Image 2026-03-31 at 10.39.26 AM (3).jpeg'
-        ]
-      },
-      'Layout Site Making': {
+      'Layout Marking': {
         icon: 'fa-th',
-        desc: 'Complete site layout planning and marking services.',
-        benefit: 'Site layout ensures organized construction planning, proper space utilization, and efficient project execution.',
-        process: 'We plan complete site layouts including building positioning, utility placements, access roads, and marking them precisely on the ground.',
+        desc: 'Complete site layout planning and marking services for organized construction.',
+        benefit: 'Ensures efficient space utilization and accurate placement of buildings and internal roads.',
+        process: 'We plan and mark entire site layouts including building footprints and utility corridors on the ground.',
         images: [
-          'layout marking/IMG_20220610_113614.jpg.jpeg',
-          'layout marking/IMG_20241130_133619.jpg.jpeg',
-          'layout marking/IMG_20250312_161441.jpg.jpeg',
-          'layout marking/IMG_20260223_113049.jpg.jpeg'
+          'images/layout%20marking/IMG_20220610_113614.jpg.jpeg',
+          'images/layout%20marking/IMG_20241130_133619.jpg.jpeg',
+          'images/layout%20marking/IMG_20250312_161441.jpg.jpeg',
+          'images/layout%20marking/IMG_20260223_113049.jpg.jpeg'
+        ]
+      },
+      'Subdivision Survey': {
+        icon: 'fa-divide',
+        desc: 'Accurate partitioning of land into multiple plots with legal compliance.',
+        benefit: 'Crucial for dividing properties among family members or developing land into separate saleable plots.',
+        process: 'We prepare detailed subdivision plans with precise measurements for each plot according to regulatory standards.',
+        images: [
+          'images/subdivision%20survey/IMG_20251202_162150.jpg.jpeg',
+          'images/subdivision%20survey/IMG_20260320_095330.jpg.jpeg',
+          'images/subdivision%20survey/IMG_20260320_095625.jpg.jpeg',
+          'images/subdivision%20survey/IMG_20260320_152256.jpg.jpeg'
         ]
       }
     };

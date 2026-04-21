@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rmddigitalsurveyors.com/sitemap.xml
+Sitemap: https://rmddigitalsurveyors.in/sitemap.xml
