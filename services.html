@@ -653,6 +653,12 @@
       <a href="services.html">Contour Survey</a>
       <a href="services.html">Layout Marking</a>
       <a href="services.html">Subdivision Survey</a>
+      <a href="services.html">Boundary Survey</a>
+      <a href="services.html">Stakeout Survey</a>
+      <a href="services.html">Topographic Survey</a>
+      <a href="services.html">Interior Survey</a>
+      <a href="services.html">Levelling Survey</a>
+      <a href="services.html">Earthwork And Volume Calculation</a>
     </div>
     <a href="projects.html"><i class="fas fa-building" style="width:20px;color:var(--gold)"></i> Projects</a>
     <a href="index.html#testimonials"><i class="fas fa-star" style="width:20px;color:var(--gold)"></i> Testimonials</a>
@@ -711,6 +717,60 @@
           <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
         </div>
       </div>
+
+      <div class="service-card" onclick="openServiceModal('Boundary Survey')" title="View Boundary Survey Details">
+        <div class="service-card-body">
+          <div class="service-icon"><i class="fas fa-draw-polygon"></i></div>
+          <h3>Boundary Survey</h3>
+          <p>Measure existing boundaries for exact extent and dimensions to protect property rights.</p>
+          <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
+      </div>
+
+      <div class="service-card" onclick="openServiceModal('Stakeout Survey')" title="View Stakeout Survey Details">
+        <div class="service-card-body">
+          <div class="service-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <h3>Stakeout Survey</h3>
+          <p>Precision marking of proposed buildings or structures on the ground for construction.</p>
+          <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
+      </div>
+
+      <div class="service-card" onclick="openServiceModal('Topographic Survey')" title="View Topographic Survey Details">
+        <div class="service-card-body">
+          <div class="service-icon"><i class="fas fa-mountain"></i></div>
+          <h3>Topographic Survey</h3>
+          <p>Comprehensive mapping of horizontal and vertical features of land for design analysis.</p>
+          <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
+      </div>
+
+      <div class="service-card" onclick="openServiceModal('Interior Survey')" title="View Interior Survey Details">
+        <div class="service-card-body">
+          <div class="service-icon"><i class="fas fa-door-open"></i></div>
+          <h3>Interior Survey</h3>
+          <p>Detailed measurement and mapping of interior building dimensions and features.</p>
+          <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
+      </div>
+
+      <div class="service-card" onclick="openServiceModal('Levelling Survey')" title="View Levelling Survey Details">
+        <div class="service-card-body">
+          <div class="service-icon"><i class="fas fa-equals"></i></div>
+          <h3>Levelling Survey</h3>
+          <p>Determining relative heights of points on the ground for accurate foundation level.</p>
+          <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
+      </div>
+
+      <div class="service-card" onclick="openServiceModal('Earthwork And Volume Calculation')" title="View Earthwork And Volume Calculation Details">
+        <div class="service-card-body">
+          <div class="service-icon"><i class="fas fa-cube"></i></div>
+          <h3>Earthwork & Volume Calculation</h3>
+          <p>Calculating soil excavation and fill volumes for precise construction cost estimation.</p>
+          <span class="service-btn"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -751,6 +811,12 @@
           <li><a href="services.html">Contour Survey</a></li>
           <li><a href="services.html">Layout Marking</a></li>
           <li><a href="services.html">Subdivision Survey</a></li>
+          <li><a href="services.html">Boundary Survey</a></li>
+          <li><a href="services.html">Stakeout Survey</a></li>
+          <li><a href="services.html">Topographic Survey</a></li>
+          <li><a href="services.html">Interior Survey</a></li>
+          <li><a href="services.html">Levelling Survey</a></li>
+          <li><a href="services.html">Earthwork & Volume</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1049,6 +1115,48 @@
           'images/subdivision%20survey/IMG_20260320_095625.jpg.jpeg',
           'images/subdivision%20survey/IMG_20260320_152256.jpg.jpeg'
         ]
+      },
+      'Boundary Survey': {
+        icon: 'fa-draw-polygon',
+        desc: 'Measure existing boundaries for exact extent and dimensions.',
+        benefit: 'Accurate boundary measurements protect your property rights and are essential for legal documentation.',
+        process: 'We use latest Total Station and DGPS technology to measure and document property boundaries with precision.',
+        images: []
+      },
+      'Stakeout Survey': {
+        icon: 'fa-map-marker-alt',
+        desc: 'Marking the exact location of proposed buildings or structures on the ground.',
+        benefit: 'Ensures construction happens exactly where intended, avoiding encroachment and design deviations.',
+        process: 'Guided by architectural plans, we stake out precise coordinates on the site for excavation and construction.',
+        images: []
+      },
+      'Topographic Survey': {
+        icon: 'fa-mountain',
+        desc: 'Mapping the horizontal and vertical features of a land area.',
+        benefit: 'Provides a complete picture of the site features, essential for engineering and infrastructure design.',
+        process: 'We record man-made and natural features like buildings, roads, trees, and elevations across the site.',
+        images: []
+      },
+      'Interior Survey': {
+        icon: 'fa-door-open',
+        desc: 'Measuring and mapping the interior dimensions and features of a building.',
+        benefit: 'Required for space planning, renovation, and accurate as-built documentation.',
+        process: 'We use laser distance meters to capture internal floor plans, wall thicknesses, and room dimensions.',
+        images: []
+      },
+      'Levelling Survey': {
+        icon: 'fa-equals',
+        desc: 'Determining the relative heights of different points on the ground.',
+        benefit: 'Crucial for determining drainage patterns and ensuring level foundations.',
+        process: 'Using digital levels, we establish precise elevation benchmarks across the construction site.',
+        images: []
+      },
+      'Earthwork And Volume Calculation': {
+        icon: 'fa-cube',
+        desc: 'Calculating the volume of soil to be excavated or filled for construction.',
+        benefit: 'Helps in cost estimation and planning for soil movement and disposal.',
+        process: 'By comparing initial and final terrain models, we accurately calculate cut and fill volumes.',
+        images: []
       }
     };
 
@@ -1064,9 +1172,15 @@
       document.getElementById('modalProcess').textContent = data.process;
 
       const gallery = document.getElementById('modalGallery');
-      gallery.innerHTML = data.images.map(img =>
-        `<img src="${img}" alt="${serviceName}" class="modal-img">`
-      ).join('');
+      if (data.images && data.images.length > 0) {
+        gallery.innerHTML = data.images.map(img =>
+          `<img src="${img}" alt="${serviceName}" class="modal-img">`
+        ).join('');
+        gallery.style.display = 'grid';
+      } else {
+        gallery.innerHTML = '';
+        gallery.style.display = 'none';
+      }
 
       document.getElementById('serviceModal').classList.add('active');
       document.body.style.overflow = 'hidden';
